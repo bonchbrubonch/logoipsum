@@ -47,7 +47,20 @@ body {
 	letter-spacing: .3px;
 	background-color: #F4F2F7;
 }
-
+body.lock{
+	overflow: hidden;
+	position: relative;
+	&::after{
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(1, 13, 27, 0.15);
+		z-index: 101;
+	}
+}
 .wrapper {
 	display: flex;
 	flex-direction: column;
