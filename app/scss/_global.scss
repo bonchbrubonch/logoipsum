@@ -1,0 +1,188 @@
+html,
+body {
+	height: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+input,
+textarea {
+	outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-size: inherit;
+}
+
+body {
+	height: 100%;
+	min-width: 320px;
+	color: rgb(0, 11, 30);
+	font-family: "Gilroy";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 140%;
+	letter-spacing: .3px;
+	background-color: #F4F2F7;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.container {
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.btn {
+	width: fit-content;
+	padding: 12px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: rgb(0, 26, 72);
+	font-family: "Roboto";
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 23px;
+	border: 3px solid rgb(255, 255, 255);
+	border-radius: 50px;
+	&--green{
+		background-color: #E2FF3D;
+	}
+	&--violet{
+		background-color: #A46AFD;
+		color: #fff;
+	}
+	svg {
+		margin: 0 0 0 40px;
+		transition: linear .2s;
+	}
+
+	&:hover {
+		svg {
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.title {
+	color: rgb(0, 11, 30);
+	font-family: "Roboto";
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 120%;
+}
+
+//range slider
+.range-wrap {
+	max-width: 835px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px;
+	border-radius: 50px;
+	border-radius: 50px;
+	box-shadow: inset 0px 2px 4px 0px rgba(1, 13, 27, 0.15);
+	background-color: #fff;
+	height: 32px;
+}
+
+.irs--flat {
+	margin: -23px 0 0 0;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+	color: rgb(0, 26, 72);
+	font-family: "Roboto";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 130%;
+	padding: 8px 15px;
+	border: 3px solid rgb(164, 106, 252);
+	border-radius: 12px;
+	background-color: #fff;
+	margin: 60px 0 -60px 0;
+}
+
+.irs--flat .irs-line {
+	top: 25px;
+	height: 10px;
+	background-color: #E7E6E7;
+	border-radius: 50px;
+}
+
+.irs--flat .irs-bar {
+	top: 25px;
+	height: 10px;
+	border-radius: 50px;
+	background-color: #A46AFD;
+}
+
+.irs--flat .irs-handle,
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before {
+	display: none;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+	color: rgb(0, 26, 72);
+	font-family: "Roboto";
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 130%;
+	padding: 13px 20px;
+	background-color: #fff;
+	border: 4px solid rgb(164, 106, 252);
+	border-radius: 12px;
+	z-index: 100;
+}
+
+.soc{
+	display: flex;
+	li{
+		margin: 0 10px 0 0 !important;
+		transition: linear .2s;
+		&:hover{
+			opacity: .7;
+		}
+	}
+
+}
