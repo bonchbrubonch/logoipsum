@@ -94,12 +94,20 @@ body.lock{
 	line-height: 23px;
 	border: 3px solid rgb(255, 255, 255);
 	border-radius: 50px;
+	cursor: pointer;
 	&--green{
 		background-color: #E2FF3D;
+		&:hover{
+			background: linear-gradient(90.00deg, rgb(164, 106, 253),rgb(62, 244, 0) 100%);
+			color: #fff;
+		}
 	}
 	&--violet{
 		background-color: #A46AFD;
 		color: #fff;
+		&:hover{
+			background: linear-gradient(90.00deg, rgb(164, 106, 253),rgb(62, 244, 0) 100%);
+		}
 	}
 	svg {
 		margin: 0 0 0 40px;

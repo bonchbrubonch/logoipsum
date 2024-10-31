@@ -48,12 +48,13 @@ $(".accordeon dd").hide().prev().click(function () {
 		 header.classList.toggle("active");
 	 });
  }
+
  
- const productAdd = document.querySelector('.product__add');
- if (productAdd) {
-	 productAdd.addEventListener('click', function () {
-		 this.classList.toggle('active');
-		 document.body.classList.toggle('product-added'); // Тогл іншого класу для body
-	 });
- }
- 
+//після заповнення одного поля автоматично перейти до наступного input
+document.querySelectorAll('.form__group-code input').forEach((input, index, inputs) => {
+	input.addEventListener('input', (event) => {
+			if (event.target.value.length === 1 && index < inputs.length - 1) {
+					inputs[index + 1].focus(); // Переміщення фокусу на наступний input
+			}
+	});
+});

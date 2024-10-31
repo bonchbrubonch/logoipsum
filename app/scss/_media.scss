@@ -15,16 +15,34 @@
 	.partners .swiper-button-disabled {
 		top: -50px !important;
 	}
+
+	.cookie__inner {
+		flex-direction: column;
+	}
+
+	.cookie__btns {
+		margin: 30px 0 0 0;
+	}
+
+	.card__item h6 {
+		font-size: 20px;
+	}
+
+
+
+
+
 }
 
 @media (max-width: 992px) {
 	.intro h1 {
-		font-size: 38px;
+		font-size: 36px;
 		line-height: 120%;
+		width: 100%;
 	}
 
 	.title {
-		font-size: 32px;
+		font-size: 30px;
 	}
 
 	.excellence ul li {
@@ -36,15 +54,15 @@
 	}
 
 	.excellence {
-		padding: 50px 0 40px;
+		padding: 15px 0 40px;
 	}
 
 	.edge {
-		padding: 50px 0 50px;
+		padding: 25px 0 70px;
 	}
 
 	.partners {
-		padding: 100px 0;
+		padding: 65px 0;
 	}
 
 	.faq {
@@ -60,8 +78,41 @@
 		padding: 0 0 0 50px;
 	}
 
+	.card__item {
+		padding: 20px;
+		border-radius: 20px;
+		width: calc(33.33333% - 30px);
+	}
+
+	.card__logo {
+		max-width: 140px;
+		border-radius: 12px;
+		margin: 0 0 15px 0;
+	}
+
+	.card__item p {
+		font-size: 12px;
+	}
+
+	.card__item strong {
+		font-size: 20px;
+	}
+
+	.card__item .btn {
+		margin: 20px 0 0 0;
+		font-size: 16px;
+	}
 
 
+	.page .title {
+		max-width: 100%;
+		font-size: 32px;
+		margin: 0 0 70px 0;
+	}
+
+	.page {
+		padding: 45px 0 0;
+	}
 
 
 }
@@ -89,22 +140,27 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		height: 300px;
+		height: calc(100vh - 45px);
 		z-index: 99999;
 		display: flex;
-		padding: 30px 15px 20px;
+		padding: 110px 15px 20px;
 		flex-direction: column;
 		align-items: flex-start;
-		justify-content: flex-start;
+		justify-content: space-between;
 		transform: translateX(-100%);
 		overflow: auto;
 		background: #fff;
 		opacity: 0;
+		background-image: url("../images/content/menu.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top center;
 		transition: linear .4s;
 
 		ul {
 			flex-direction: column;
 			width: 100%;
+			align-items: flex-start;
 
 			a,
 			span {
@@ -117,7 +173,7 @@
 				line-height: 140%;
 				text-transform: uppercase;
 				text-decoration: none;
-				border-bottom: 1px solid rgb(153, 153, 153);
+				border-bottom: 1px solid rgb(164, 106, 253);
 
 				&:hover {
 					background-color: #2B2A29;
@@ -128,6 +184,12 @@
 
 		li+li {
 			margin: 0;
+		}
+
+		li {
+			display: block;
+			width: 100%;
+			margin: 0 0 30px 0 !important;
 		}
 	}
 
@@ -151,9 +213,9 @@
 	}
 
 	.header__menu-btn span {
-		margin: 0 0 0 auto;
+		margin: 0 0 0 0;
 		display: block;
-		width: 100%;
+		width: 70%;
 		height: 2px;
 		background-color: #2B2A29;
 		transition: linear .2s;
@@ -189,7 +251,7 @@
 	}
 
 	.header__menu-btn.active {
-		background-color: #16151980;
+		background-color: #A46AFD;
 		border-radius: 50%;
 		width: 22px;
 		height: 22px;
@@ -228,12 +290,22 @@
 	}
 
 	.excellence ul li {
-		width: calc(50% - 25px);
+		width: calc(100% - 25px);
+		padding: 25px !important;
+	}
+
+	.excellence__img {
+		margin: 0 0 5px 0;
+	}
+
+	.excellence ul li h6 {
+		font-size: 18px;
+		margin: 0 0 5px 0;
 	}
 
 	.edge__num {
-		width: 35px;
-		font-size: 40px;
+		width: 45px;
+		font-size: 70px;
 	}
 
 	.edge ul li h6 {
@@ -243,10 +315,12 @@
 
 	.edge ul li {
 		padding: 30px 20px 30px 20px;
+		border-radius: 20px;
+		margin: 0;
 	}
 
 	.excellence__inner {
-		padding: 20px 15px 0;
+		padding: 20px 20px 0;
 	}
 
 	.excellence ul li {
@@ -257,6 +331,190 @@
 	.excellence ul li p {
 		width: 100%;
 	}
+
+	.cookie__btns {
+		flex-direction: column;
+		width: 100%;
+
+		.btn {
+			padding: 5px;
+			margin: 0 0 10px 0;
+			font-size: 12px;
+			height: 35px;
+			width: 100%;
+			display: block;
+			text-align: center;
+		}
+	}
+
+	.header__logo {
+		width: 115px;
+	}
+
+	.header__inner {
+		height: 45px;
+	}
+
+	.header__nav {
+		top: 45px;
+	}
+
+	.intro .btn {
+		margin: 105px auto 0;
+	}
+
+	.btn {
+		font-size: 16px;
+	}
+
+	.excellence .title {
+		margin: 0;
+	}
+
+	.excellence__top {
+		align-items: flex-start;
+	}
+
+	.excellence__top p {
+		font-size: 14px;
+	}
+
+	.edge .title {
+		margin: 0 0 20px 0;
+	}
+
+	.edge ul li {
+		width: calc(100% - 20px);
+		margin: 0 0 0 20px !important;
+		background: linear-gradient(169.84deg, rgb(255, 255, 255) 25.195%, rgb(231, 216, 255) 82.003%);
+	}
+
+	.edge ul li+li {
+		margin: -20px 0 0 20px !important;
+	}
+
+	.partners .swiper-button-next,
+	.partners .swiper-button-prev {
+		width: 60px;
+		height: 30px;
+		top: -35px;
+
+		img {
+			width: 30px;
+			object-fit: contain;
+		}
+	}
+
+	.partners .swiper-button-disabled {
+		top: -30px !important;
+		width: 40px;
+		height: 20px;
+	}
+
+	.partners .swiper-button-prev {
+		right: 80px;
+	}
+
+	.partners__item {
+		height: 70px;
+		border-radius: 12px;
+	}
+
+	.partners .title {
+		margin: 0 0 20px 0;
+	}
+
+	.faq {
+		padding: 75px 0 15px;
+	}
+
+	.faq .title {
+		margin: 0 0 20px 0;
+	}
+
+	.accordeon dl {
+		border-radius: 20px;
+		padding: 20px;
+	}
+
+	.accordeon dt {
+		font-size: 14px;
+		font-weight: 500;
+		border-bottom: 1px dashed #67bb67;
+		margin: 0 0 10px 0;
+		padding: 0 0 20px 0;
+	}
+
+	.accordeon dd {
+		font-size: 12px;
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.banner {
+		padding: 35px 0 15px;
+	}
+
+	.banner h3 {
+		margin: 0 0 13px 0;
+	}
+
+	.banner__inner {
+		padding: 85px 20px 45px;
+	}
+
+	.footer {
+		margin: 50px 0 0 0;
+		padding: 70px 0 0 0;
+	}
+
+	.footer__logo {
+		width: 150px;
+		margin: 0 0 3px 0;
+	}
+
+	.footer p {
+		font-size: 10px;
+		line-height: 140%;
+	}
+
+	.footer__col:nth-child(2),
+	.footer__col:nth-child(3) {
+		width: calc(50% - 25px) !important;
+	}
+
+	.header .soc {
+		display: flex;
+		flex-direction: row;
+
+		li {
+			padding: 0 15px 0 0;
+			width: fit-content;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		a {
+			padding: 0;
+			border: none;
+		}
+	}
+
+	.card__item {
+		width: calc(50% - 30px);
+	}
+	.fancybox-button{
+		top: 15px !important;
+		right: 15px !important;
+	}
+
+
+
+
+
 }
 
 @media (max-width: 576px) {
@@ -278,19 +536,51 @@
 	}
 
 	.range-wrap {
-		width: 90%;
+		width: 100%;
+	}
+
+	.irs--flat .irs-line,
+	.irs--flat .irs-bar {
+		top: 25px;
+		height: 6px;
 	}
 
 	.excellence__top {
 		flex-direction: column;
 	}
 
-	.edge ul li {
-		width: calc(100% - 20px);
+	.banner p {
+		margin: 0 0 25px 0;
+		font-size: 16px;
 	}
-	
-.banner p {
-	margin: 0 0 25px 0;
-	font-size: 16px;
-}
+
+	.range-wrap {
+		padding: 5px 10px;
+		height: 25px;
+	}
+
+	.irs--flat {
+		margin: -20px 0 0 0;
+	}
+
+	.card__item {
+		width: calc(100% - 30px);
+		margin: 0 0 20px 30px;
+	}
+
+	.modal h6 {
+		font-size: 18px;
+	}
+
+	.modal {
+		padding: 50px 15px 25px 15px;
+	}
+
+	.form label,
+	.form .error .error-text{
+		font-size: 12px;
+	}
+	.form  input{
+		font-size: 14px;
+	}
 }
