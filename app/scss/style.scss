@@ -268,7 +268,8 @@
 		height: 125px;
 
 		img {
-			width: 55%;
+			width: auto;
+			height: 35px;
 			object-fit: contain;
 		}
 	}
@@ -409,6 +410,28 @@
 		border-top: 1px dashed #67bb67;
 		padding: 20px 0 0 0;
 		margin: 10px 0 0 0;
+	}
+	ol {
+		padding: 0;
+
+		li {
+			position: relative;
+			counter-increment: counter;
+			margin: 0 0 5px 0;
+			padding: 0 0 0 23px;
+
+			&::before {
+				content: counter(counter) ".";
+				color: #000;
+				position: absolute;
+				left: 0;
+				top: 1px;
+				color: rgb(164, 106, 253);
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 140%;
+			}
+		}
 	}
 }
 
