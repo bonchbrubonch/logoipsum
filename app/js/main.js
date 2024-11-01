@@ -58,3 +58,13 @@ document.querySelectorAll('.form__group-code input').forEach((input, index, inpu
 			}
 	});
 });
+
+  // клас sticky для шапки при скроллі
+  const navOffset = document.querySelector('.header').offsetTop + 200;
+  window.addEventListener('scroll', function () {
+    const scrolled = window.scrollY;
+    document.querySelector('.header').classList.toggle('sticky', scrolled > navOffset);
+  });
+  
+  //
+  document.querySelector('header + *').classList.add('margin-top');

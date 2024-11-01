@@ -3,6 +3,10 @@ body {
 	height: 100%;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -47,10 +51,12 @@ body {
 	letter-spacing: .3px;
 	background-color: #F4F2F7;
 }
-body.lock{
+
+body.lock {
 	overflow: hidden;
 	position: relative;
-	&::after{
+
+	&::after {
 		content: "";
 		position: absolute;
 		top: 0;
@@ -61,6 +67,7 @@ body.lock{
 		z-index: 101;
 	}
 }
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -95,20 +102,25 @@ body.lock{
 	border: 3px solid rgb(255, 255, 255);
 	border-radius: 50px;
 	cursor: pointer;
-	&--green{
+
+	&--green {
 		background-color: #E2FF3D;
-		&:hover{
-			background: linear-gradient(90.00deg, rgb(164, 106, 253),rgb(62, 244, 0) 100%);
+
+		&:hover {
+			background: linear-gradient(90.00deg, rgb(164, 106, 253), rgb(62, 244, 0) 100%);
 			color: #fff;
 		}
 	}
-	&--violet{
+
+	&--violet {
 		background-color: #A46AFD;
 		color: #fff;
-		&:hover{
-			background: linear-gradient(90.00deg, rgb(164, 106, 253),rgb(62, 244, 0) 100%);
+
+		&:hover {
+			background: linear-gradient(90.00deg, rgb(164, 106, 253), rgb(62, 244, 0) 100%);
 		}
 	}
+
 	svg {
 		margin: 0 0 0 40px;
 		transition: linear .2s;
@@ -158,6 +170,7 @@ body.lock{
 	border-radius: 12px;
 	background-color: #fff;
 	margin: 60px 0 -60px 0;
+	visibility: visible !important;
 }
 
 .irs--flat .irs-line {
@@ -196,12 +209,14 @@ body.lock{
 	z-index: 100;
 }
 
-.soc{
+.soc {
 	display: flex;
-	li{
+
+	li {
 		margin: 0 10px 0 0 !important;
 		transition: linear .2s;
-		&:hover{
+
+		&:hover {
 			opacity: .7;
 		}
 	}

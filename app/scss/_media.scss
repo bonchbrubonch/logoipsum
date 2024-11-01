@@ -140,7 +140,7 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		height: calc(100vh - 45px);
+		height: 100vh;
 		z-index: 99999;
 		display: flex;
 		padding: 110px 15px 20px;
@@ -161,19 +161,21 @@
 			flex-direction: column;
 			width: 100%;
 			align-items: flex-start;
-
+			li{
+				border-bottom: 1px solid rgb(164, 106, 253);
+			}
 			a,
 			span {
-				padding: 15px;
+				padding: 7px 15px;
 				display: block;
 				width: 100%;
 				color: rgb(43, 42, 41);
 				font-size: 14px;
 				font-weight: 400;
 				line-height: 140%;
-				text-transform: uppercase;
+				text-transform: capitalize;
 				text-decoration: none;
-				border-bottom: 1px solid rgb(164, 106, 253);
+
 
 				&:hover {
 					background-color: #2B2A29;
@@ -290,7 +292,7 @@
 	}
 
 	.excellence ul li {
-		width: calc(100% - 25px);
+		width: calc(50% - 25px);
 		padding: 25px !important;
 	}
 
@@ -383,10 +385,22 @@
 		margin: 0 0 20px 0;
 	}
 
+	.edge ul {
+		width: calc(100% + 60px)
+	}
+
 	.edge ul li {
-		width: calc(100% - 20px);
+		width: calc(50% - 20px);
 		margin: 0 0 0 20px !important;
 		background: linear-gradient(169.84deg, rgb(255, 255, 255) 25.195%, rgb(231, 216, 255) 82.003%);
+	}
+
+	.edge ul li:nth-child(even) {
+		margin: 0 0 0 -20px !important;
+	}
+
+	.edge ul li:last-child {
+		margin: -20px 0 0 -20px !important;
 	}
 
 	.edge ul li+li {
@@ -506,13 +520,22 @@
 	.card__item {
 		width: calc(50% - 30px);
 	}
-	.fancybox-button{
+
+	.fancybox-button {
 		top: 15px !important;
 		right: 15px !important;
 	}
+
 	.partners__item img {
-    height: 29px;
+		height: 29px;
 	}
+
+	.margin-top {
+		margin: 45px 0 0 0;
+	}
+
+
+
 
 
 
@@ -579,10 +602,29 @@
 	}
 
 	.form label,
-	.form .error .error-text{
+	.form .error .error-text {
 		font-size: 12px;
 	}
-	.form  input{
+
+	.form input {
 		font-size: 14px;
+	}
+
+	.excellence ul li {
+		width: calc(100% - 25px);
+	}
+
+	.edge ul li {
+		width: calc(100% - 20px);
+		margin: 0 0 0 20px !important;
+		background: linear-gradient(169.84deg, rgb(255, 255, 255) 25.195%, rgb(231, 216, 255) 82.003%);
+	}
+
+	.edge ul li:nth-child(even) {
+		margin: -20px 0 0 20px !important;
+	}
+
+	.edge ul {
+		width: auto;
 	}
 }
