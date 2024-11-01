@@ -64,6 +64,7 @@
 				}
 
 				a {
+					color: #A46AFD;
 					&::after {
 						width: 100%;
 					}
@@ -99,14 +100,15 @@
 .margin-top{
 margin: 85px 0 0 0;
 }
-.header.sticky {}
 
-.intro {
-	padding: 115px 0 75px;
-	background-image: url("../images/content/intro-bg.png");
+.wrapper{
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-position: bottom center;
+	background-position: top center;
+}
+.intro {
+	padding: 115px 0 75px;
+
 
 	h1 {
 		width: 88%;
@@ -578,7 +580,6 @@ margin: 85px 0 0 0;
 	right: 15px;
 	width: calc(100% - 30px);
 	z-index: 102;
-	display: none;
 
 	&__inner {
 		display: flex;
@@ -605,10 +606,6 @@ margin: 85px 0 0 0;
 
 .page {
 	padding: 135px 0 125px;
-	background-image: url("../images/content/intro-bg.png");
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: top center;
 
 	.title {
 		max-width: 580px;
@@ -681,12 +678,30 @@ margin: 85px 0 0 0;
 	margin: 0 0 30px -30px;
 
 	&__item {
+		position: relative;
 		padding: 30px;
 		width: calc(25% - 30px);
 		margin: 0 0 30px 30px;
 		border-radius: 30px;
 		background: rgb(255, 255, 255);
-
+		&::after{
+			content: "";
+			position: absolute;
+			top: -1px;
+			right: -1px;
+			width: calc(100% + 2px);
+			height: calc(100% + 2px);
+			background: linear-gradient(90.00deg, rgb(164, 106, 253),rgb(62, 244, 0) 100%);
+			z-index: -1;
+			border-radius: 30px;
+			opacity: 0;
+			transition: linear .2s;
+		}
+		&:hover{
+			&::after{
+				opacity: 1;
+			}
+		}
 		h6 {
 			margin: 0 0 5px 0;
 			color: rgb(164, 106, 253);
@@ -698,7 +713,7 @@ margin: 85px 0 0 0;
 		}
 
 		p {
-			margin: 0 0 5px 0;
+			margin: 5px 0 0 0;
 		}
 
 		strong {
@@ -714,6 +729,10 @@ margin: 85px 0 0 0;
 			margin: 40px 0 0 0;
 			width: 100%;
 			text-align: center;
+			transition: linear .2s;
+			&:hover{
+				background: #A46AFD;
+			}
 		}
 	}
 
@@ -726,9 +745,12 @@ margin: 85px 0 0 0;
 		margin: 0 0 30px 0;
 
 		img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain
+			display: block;
+			width: fit-content;
+			height: 30px;
+			object-fit: contain;
+			object-position: center;
+			margin: 0 auto;
 		}
 	}
 

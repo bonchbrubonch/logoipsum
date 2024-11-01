@@ -40,15 +40,28 @@ $(".accordeon dd").hide().prev().click(function () {
  const header = document.querySelector(".header");
  
  if (menuBtn && navMenu && header) {
-	 menuBtn.addEventListener("click", function () {
-		 this.classList.toggle("active");
-		 navMenu.classList.toggle("open");
-		 document.body.classList.toggle("lock");
-		 document.body.classList.toggle("bg-dark");  // Тогл класу для body
-		 header.classList.toggle("active");
-	 });
+		 menuBtn.addEventListener("click", function () {
+				 this.classList.toggle("active");
+				 navMenu.classList.toggle("open");
+				 document.body.classList.toggle("lock");
+				 document.body.classList.toggle("bg-dark");  // Тогл класу для body
+				 header.classList.toggle("active");
+		 });
+ 
+		 // Додаємо обробник події для всіх посилань всередині header__nav
+		 const navLinks = navMenu.querySelectorAll("a");
+		 navLinks.forEach(link => {
+				 link.addEventListener("click", function () {
+						 // При кліці на посилання прибираємо додаткові класи
+						 menuBtn.classList.remove("active");
+						 navMenu.classList.remove("open");
+						 document.body.classList.remove("lock");
+						 document.body.classList.remove("bg-dark");
+						 header.classList.remove("active");
+				 });
+		 });
  }
-
+ 
  
 //після заповнення одного поля автоматично перейти до наступного input
 document.querySelectorAll('.form__group-code input').forEach((input, index, inputs) => {
