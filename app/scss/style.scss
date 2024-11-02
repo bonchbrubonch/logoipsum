@@ -785,27 +785,20 @@
 }
 
 .autosearch {
-	position: relative;
 	&__drop {
 		display: none;
-		position: absolute;
 		z-index: 1;
-		top: 60px;
-		left: 0;
-		right: 0;
-		width: 100%;
 		bottom: 0px;
 		margin: 20px 0 0 0;
 		border: 1px solid rgb(164, 106, 253);
 		border-radius: 8px;
-		background-color: #fff;
+		background-color: transparent;
 		padding: 13px 5px 13px 16px;
-		height: 150px;
-		overflow: auto;
+	
 	}
 	ul{
-	
-		// overflow: auto;
+		height: 150px;
+		overflow: auto;
 	}
 	::-webkit-scrollbar {
 		width: 6px;
@@ -847,7 +840,7 @@
 			height: 50px;
 			outline: none;
 			font-size: 16px;
-
+			color: rgb(0, 11, 30) !important;
 			&::placeholder {
 
 				font-weight: 400;
@@ -873,6 +866,7 @@
 		/* Для створення простору для стрілки */
 		padding-right: 30px;
 		position: relative;
+		color: rgb(0, 11, 30) !important;
 	}
 
 	.select-wrap {

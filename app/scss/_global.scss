@@ -28,6 +28,10 @@ li {
 input,
 textarea {
 	outline: none;
+	font-size: 16px !important;
+	&::placeholder{
+		font-size: 16px !important;
+	}
 }
 
 h1,
