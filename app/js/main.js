@@ -65,12 +65,21 @@ if (menuBtn && navMenu && header) {
 
 //після заповнення одного поля автоматично перейти до наступного input
 document.querySelectorAll('.form__group-code input').forEach((input, index, inputs) => {
+	// Обробка введення символів і переміщення фокусу вправо
 	input.addEventListener('input', (event) => {
 		if (event.target.value.length === 1 && index < inputs.length - 1) {
 			inputs[index + 1].focus(); // Переміщення фокусу на наступний input
 		}
 	});
+
+	// Обробка натискання клавіші Backspace і переміщення фокусу вліво
+	input.addEventListener('keydown', (event) => {
+		if (event.key === 'Backspace' && event.target.value === '' && index > 0) {
+			inputs[index - 1].focus(); // Переміщення фокусу на попередній input
+		}
+	});
 });
+
 
 // клас sticky для шапки при скроллі
 const navOffset = document.querySelector('.header').offsetTop + 200;
@@ -127,3 +136,8 @@ listItems.forEach(function(item) {
 });
 
 
+//
+Fancybox.bind(".modal", {
+	trapFocus: true,        // Фокус залишається в модальному вікні
+	clickOutside: false     // Забороняє закриття при кліку за межами модального вікна
+  });
