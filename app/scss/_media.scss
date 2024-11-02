@@ -89,7 +89,6 @@
 	}
 
 	.card__logo {
-		max-width: 140px;
 		border-radius: 12px;
 		margin: 0 0 15px 0;
 	}
@@ -643,4 +642,11 @@
 		width: calc(50% - 10px);
 		margin: 0 0 0 10px;
 	}
+	.card__logo img{
+		width: 120px;
+		height: auto;
+	}
+
+
+
 }

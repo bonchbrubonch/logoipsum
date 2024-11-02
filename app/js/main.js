@@ -5,6 +5,26 @@ $(function () {
 		from: 2500,
 	});
 
+
+
+	// закриття модалки тільки при кліці на кнопку "закрити"
+	$('[data-fancybox]').fancybox({
+		touch: false, // Вимкнути закриття через дотик
+		closeExisting: false,
+		beforeClose: function(instance, current) {
+				// Перевірка, чи клік відбувся на кнопці закриття
+				if (!$(current.$content).find('.fancybox-close-small').is(':hover')) {
+						return false; // Не закривати модальне вікно
+				}
+		}
+});
+
+// Додати обробник події для кнопки закриття
+$(document).on('click', '.fancybox-close-small', function(e) {
+		e.preventDefault();
+		$.fancybox.close(); // Закрити модальне вікно
+});
+
 })
 
 var swiper = new Swiper(".partners__slider", {
@@ -96,14 +116,14 @@ const inputField = document.getElementById('autosearch');
 const dropdown = document.querySelector('.autosearch__drop');
 const listItems = dropdown.querySelectorAll('.autosearch__drop li');
 
-inputField.addEventListener('input', function() {
+inputField.addEventListener('input', function () {
 	const filterText = inputField.value.toLowerCase();
 	let hasVisibleItems = false; // Перемінна для перевірки наявності видимих елементів
-	
+
 	if (filterText.length >= 1) {
-		listItems.forEach(function(item) {
+		listItems.forEach(function (item) {
 			const itemText = item.textContent.toLowerCase();
-			
+
 			// Показуємо тільки ті елементи, які містять введений текст
 			if (itemText.includes(filterText)) {
 				item.style.display = 'block';
@@ -112,22 +132,22 @@ inputField.addEventListener('input', function() {
 				item.style.display = 'none';
 			}
 		});
-		
+
 		// Якщо є видимі елементи, показуємо випадаючий список, інакше — приховуємо його
 		if (hasVisibleItems) {
 			dropdown.style.display = 'block';
 		} else {
 			dropdown.style.display = 'none';
 		}
-		
+
 	} else {
 		dropdown.style.display = 'none';
 	}
 });
 
 // Додаємо подію кліку для кожного елемента списку
-listItems.forEach(function(item) {
-	item.addEventListener('click', function() {
+listItems.forEach(function (item) {
+	item.addEventListener('click', function () {
 		// Передаємо текст вибраного елемента у поле введення
 		inputField.value = item.textContent;
 		// Ховаємо випадаючий список після вибору
@@ -136,8 +156,3 @@ listItems.forEach(function(item) {
 });
 
 
-//
-Fancybox.bind(".modal", {
-	trapFocus: true,        // Фокус залишається в модальному вікні
-	clickOutside: false     // Забороняє закриття при кліку за межами модального вікна
-  });
