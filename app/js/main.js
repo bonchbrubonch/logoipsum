@@ -81,3 +81,4 @@ document.querySelectorAll('.form__group-code input').forEach((input, index, inpu
   
   //
   document.querySelector('header + *').classList.add('margin-top');
+
